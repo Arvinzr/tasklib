@@ -1,0 +1,7 @@
+# Build: docker build -t vsal.garvan.org.au:5000/tasklib:latest .
+# Create a data volume container (no need to start/run it):
+#	docker create -v /apps --name tasklibapps vsal.garvan.org.au:5000/tasklib:latest /bin/true
+
+FROM alpine:3.4
+COPY ./idleapp_2.11-0.0.1.jar  /apps/
+COPY ./dnaerys_2.11-0.0.1.jar  /apps/
